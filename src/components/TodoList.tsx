@@ -4,8 +4,12 @@ interface ITodoListProps {
     items: ITodo[];
 }
 
-export default function TodoList<ITodoListProps>(props) {
+export default function TodoList(props: ITodoListProps) {
     return (
-        <div></div>
+        <div>
+            {
+                props.items.map(todo => <TodoItem key={todo.id} {...todo} />)
+            }
+        </div>
     )
 }

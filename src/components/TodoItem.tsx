@@ -1,7 +1,9 @@
 import { ITodo } from '../types/data';
-interface ITodoItem extends ITodo { };
+interface ITodoItemProps extends ITodo { };
 
-export default function TodoItem(props) {
+export default function TodoItem(props: ITodoItemProps) {
+    const { id, title, complete } = props;
+
     return (
         <div></div>
     )

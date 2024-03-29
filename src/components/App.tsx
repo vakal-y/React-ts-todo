@@ -3,7 +3,7 @@ import { ITodo } from '../types/data';
 import TodoList from "./TodoList";
 
 export default function App() {
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState<string>('');
     const [todos, setTodos] = useState<ITodo[]>([]);
 
     const addTodo = () => {
